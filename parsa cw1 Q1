@@ -13,7 +13,7 @@
 def writing():
     names = input("Enter some names: ")
 
-    names = names.strip().split()
+    names = names.strip().split(",")
     names = [name.strip().lower() for name in names if name]
 
 
@@ -24,6 +24,6 @@ def writing():
     with open("names.txt", "w") as f:
         for name in filtered_names:
             f.write(name)
-        f.write(f"\nTotal names saved: {len(filtered_names)}")
+        f.write(f"Total names saved: {len(filtered_names)}")
     print(f"File saved successfully with {len(filtered_names)} names.")
 writing()
