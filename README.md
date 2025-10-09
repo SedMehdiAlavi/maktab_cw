@@ -1,8 +1,1 @@
-cw1:
-A = ["ali", "sedmmd", "sarina", "arshiya", "reza", "parsa", "khosro", "akbar", "a", "ab", "kazem"]
-filtered_names = sorted([name for name in A if name.startswith("a") and len(name) > 3])
-with open("names.txt", "w", encoding="utf-8") as file:
-    for name in filtered_names:
-        file.write(name + "\n")
-print(f"File saved successfully with {len(filtered_names)} names.")
---------------------------------------------------------------------
+
