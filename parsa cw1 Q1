@@ -11,9 +11,9 @@
 #         f.close()
 
 def writing():
-    raw_input = input("Enter some names separated by space: ")
+    names = input("Enter some names: ")
 
-    names = raw_input.strip().split()
+    names = names.strip().split()
     names = [name.strip().lower() for name in names if name]
 
 
