@@ -20,14 +20,16 @@ temp = []
 
 @decorated_function
 def imulate_weather(days, start_temp = 25):
-    temp.append(random.randint(-2, 3) + start_temp)
-    print(temp)
-    
-    print(days)
+    if isinstance(days , int) and days > 0:
+       print("correct input")
 
-    if not isinstance(days , int) and days < 0:
-       print("ok input")
-     
-   
+    else:
+        print("invalid input")
 
-imulate_weather(days)
+    for i in range(days):
+        temp.append(random.randint(-2, 3) + start_temp)
+        avg = sum(temp) // len(temp)
+
+    print(f"temps: {temp}, avg: {avg}, min: {min(temp)}, max: {max(temp)}")
+
+imulate_weather(3)
