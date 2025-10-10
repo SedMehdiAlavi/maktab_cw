@@ -15,13 +15,19 @@ def decorated_function(func) :
            print("ValueError")
 
     return wrapper
-day = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+
 temp = []
+
 @decorated_function
 def imulate_weather(days, start_temp = 25):
-    days = random.choice(days)
-    temp = random.randint(-2, 3)
-
+    temp.append(random.randint(-2, 3) + start_temp)
+    print(temp)
+    
     print(days)
 
-imulate_weather(day)
+    if not isinstance(days , int) and days < 0:
+       print("ok input")
+     
+   
+
+imulate_weather(days)
