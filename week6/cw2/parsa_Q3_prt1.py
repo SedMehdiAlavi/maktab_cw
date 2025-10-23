@@ -1,10 +1,14 @@
 class Car :
+
+
+
     def __init__(self , car_id : str , model : str , year : int ,
                  is_available : bool ):
         self.car_id = car_id
         self.model = model
         self.year = year
         self.is_available = is_available
+        Car.cars.append(self)
 
     def rent_car(self):
         if self.is_avaliable:
@@ -22,7 +26,20 @@ class Car :
         # self.is_available = True
         print(f"{self.car_id} {self.model} {self.year} {self.is_available}")
 
+
+class RentalAgency :
+
+    cars = []
+
+    def __init__(self , cars : list ):
+        self.cars = cars
+
+    def add_car(self,car):
+        self.cars.append(car)
+        # Car.cars.append(self)
+        # return Car.cars
+
+
 bmw = Car("bmw" , "new" , 125 , True)
 print(bmw.display_info())
-class RentalAgency :
-    def __init__(self , add_car : int ,  ):
+print()
